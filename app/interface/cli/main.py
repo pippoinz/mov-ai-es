@@ -1,3 +1,5 @@
+""" This module contains the main function. """
+
 import sys
 
 from config import settings
@@ -6,6 +8,8 @@ from app.infrastructure.tmdb.tmdb_movie_repository import TmdbMovieRepository
 
 
 def main():
+    """Main function for the CLI."""
+
     if len(sys.argv) < 2:
         print("Usage: python main.py <movie_name>")
         sys.exit(1)
@@ -16,17 +20,12 @@ def main():
 
     query = " ".join(sys.argv[1:])
 
-    try:
-        movies = search_movies.execute(query)
-        if movies:
-            for movie in movies:
-                print(movie)
-        else:
-            print("No movies found for the given query.")
-
-    except Exception as e:
-        print(f"Error: {e}")
-        sys.exit(1)
+    movies = search_movies.execute(query)
+    if movies:
+        for movie in movies:
+            print(movie)
+    else:
+        print("No movies found for the given query.")
 
 
 if __name__ == "__main__":
