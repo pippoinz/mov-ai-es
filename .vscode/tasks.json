@@ -1,0 +1,41 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Run pylint",
+            "type": "shell",
+            "command": "${workspaceFolder}/.venv/bin/pylint",
+            "windows": {
+                "command": "${workspaceFolder}/.venv/Scripts/pylint"
+            },
+            "group": "build",
+            "args": [
+                "${workspaceFolder}/app",
+                "${workspaceFolder}/tests"
+            ],
+            "presentation": {
+                "showReuseMessage": false,
+            },
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "Run pytest",
+            "type": "shell",
+            "command": "${workspaceFolder}/.venv/bin/pytest",
+            "windows": {
+                "command": "${workspaceFolder}/.venv/Scripts/pytest"
+            },
+            "group": "test",
+            "args": [
+                "--cov=${workspaceFolder}/app",
+                "${workspaceFolder}/tests"
+            ],
+            "presentation": {
+                "showReuseMessage": false,
+            },
+            "problemMatcher": "$msCompile"
+        }
+    ]
+}

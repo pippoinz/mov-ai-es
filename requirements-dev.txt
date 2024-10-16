@@ -1,0 +1,8 @@
+-r requirements.txt
+
+# Lint
+pylint
+
+# Test
+pytest
+pytest-cov
