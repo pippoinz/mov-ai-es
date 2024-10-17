@@ -1,3 +1,5 @@
+""" This module contains the settings for the application. """
+
 import os
 import locale
 from dotenv import load_dotenv
