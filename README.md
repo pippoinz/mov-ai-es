@@ -1,6 +1,10 @@
 
 # Mov.ai.es
 
+[![Python application](https://github.com/pippoinz/mov-ai-es/actions/workflows/python-app.yml/badge.svg)](https://github.com/pippoinz/mov-ai-es/actions/workflows/python-app.yml)
+
+[![codecov](https://codecov.io/gh/pippoinz/mov-ai-es/graph/badge.svg?token=FMU9DIBW6X)](https://codecov.io/gh/pippoinz/mov-ai-es)
+
 **Description**: An application for movies, made more powerful by AI.
 
 ## Table of Contents
